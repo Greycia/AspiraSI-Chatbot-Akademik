@@ -1,16 +1,34 @@
-AspiraSI - Pradita Academic Chatbot
+# 🎓 AspiraSI - Pradita Academic Chatbot
 
-   ╔════════════════════════════════════════════════════════════════╗
-   ║                                                                ║
-   ║               ASPIRASI - INTELLIGENT ACADEMIC ADVISOR          ║
-   ║                                                                ║
-   ║       Specialization Guide • Career Roadmap • Portfolio Ideas  ║
-   ║                                                                ║
-   ║    Powered by React • TypeScript • Vite • Tailwind • Framer    ║
-   ║                                                                ║
-   ╚════════════════════════════════════════════════════════════════╝
+## Introduction
 
-Tech Stack
+**AspiraSI** is a specialized intelligent academic advisor web application designed for Information Systems students at Pradita University to guide them through specialization choices, career paths, and portfolio building. It addresses the common confusion students face regarding academic specializations and their future.
+
+Unlike generic chatbots, AspiraSI acts as a virtual mentor that helps students visualize their future by providing concrete learning roadmaps and portfolio project ideas specifically tailored for three main majors: **IS Governance**, **Enterprise Systems**, and **Business Intelligence**.
+
+<br />
+
+## ✨ Features
+
+**🧠 Academic Intelligence**
+* **Specialized Knowledge:** Pre-trained data on IS Governance, Enterprise Systems, and Business Intelligence.
+* **Smart Matching:** Maps user interests to specific Pradita University curriculums.
+* **Context Aware:** Remembers your name and semester for personalized greetings.
+
+**🗺️ Career & Portfolio Guidance**
+* **Interactive Roadmap:** A step-by-step guide from choosing a major to landing a job.
+* **Portfolio Generator:** Suggests concrete GitHub project ideas based on your chosen path.
+* **Resource Hub:** Curated recommendations for bootcamps (DQLab, Dicoding, Skilvul).
+
+**🎨 Beautiful UI/UX**
+* **Glass Morphism Design:** Modern, glowing aesthetic.
+* **Interactive Elements:** Smooth transitions and animated chat bubbles.
+* **Mobile Responsive:** Optimized for all devices with dynamic viewport handling.
+* **Smart Chips:** Quick-action buttons for easy navigation.
+
+<br />
+
+## Tech Stack
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -19,23 +37,11 @@ Tech Stack
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=white)
 ![Radix UI](https://img.shields.io/badge/Radix%20UI-161618?style=for-the-badge&logo=radix-ui&logoColor=white)
 
-Introduction
+<br />
 
-**AspiraSI** is a specialized web-based chatbot designed for Information Systems students at **Pradita University**. It addresses the common confusion students face regarding academic specializations and future career paths.
+## Project Structure
 
-Unlike generic chatbots, AspiraSI is pre-trained with specific academic data, offering tailored guidance on three main majors: **IS Governance**, **Enterprise Systems**, and **Business Intelligence**. It acts as a virtual mentor that helps students visualize their future by providing concrete learning roadmaps and portfolio project ideas.
-
-Overview
-
-A modern, responsive Single Page Application (SPA) built with the React ecosystem. It features a "Glowing Tech" aesthetic using Glassmorphism design principles.
-
-* **Interactive Roadmap:** A 3-step flow (Major → Career → Learning Path) to guide students.
-* **Smart Suggestions:** Provides curated bootcamp recommendations (DQLab, Dicoding, Skilvul, etc.).
-* **Portfolio Generator:** Offers specific project ideas and references based on user interest.
-* **Responsive UX:** Optimized for both desktop and mobile (dynamic viewport handling).
-
-Project Structure
-
+```bash
 AspiraSI/
 ├── src/
 │   ├── components/
@@ -57,14 +63,17 @@ AspiraSI/
 ├── public/                         # Static assets (Favicon, etc.)
 ├── index.html                      # Entry HTML & Meta Data
 └── vite.config.ts                  # Bundler configuration
+```
 
-Quick Start (Local)
+<br />
+
+## Quick Start (Local)
 
 Ensure you have Node.js installed.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/Greycia/AspiraSI-Chatbot-Akademik.git](https://github.com/Greycia/AspiraSI-Chatbot-Akademik.git)
+    git clone https://github.com/Greycia/AspiraSI-Chatbot-Akademik.git
     cd AspiraSI-Chatbot-Akademik
     ```
 
@@ -83,7 +92,9 @@ Ensure you have Node.js installed.
 4.  **Open in browser:**
     Navigate to `http://localhost:8080` (or the port shown in terminal).
 
-How It Works
+<br />
+
+## How It Works
 
 1.  **User Onboarding:** Users input their name, semester, and initial interest (Major) in the `LandingView`.
 2.  **Session Initialization:** `useChat.ts` initializes a session with a personalized greeting based on the user's profile.
@@ -93,41 +104,42 @@ How It Works
     * If **Portfolio** is requested: It fetches specific project ideas from `PORTFOLIO_DATA`.
 5.  **Rendering:** Responses are rendered as Text, Chips (options), or Cards (links) via `MessageBubble.tsx`.
 
-Core Components
+<br />
 
-`src/data/knowledge.ts`
+## Core Components
 
+### `src/data/knowledge.ts`
 The static database containing all academic intelligence. It holds:
 * `PRADITA_DATA`: General major descriptions.
 * `CAREER_PATHS`: 10 specific careers per major with detailed learning steps.
 * `PORTFOLIO_DATA`: GitHub portfolio references and project ideas.
 * `BOOTCAMP_RECOMMENDATIONS`: Curated external learning resources.
 
-`src/hooks/useChat.ts`
-
+### `src/hooks/useChat.ts`
 The engine of the application. It handles:
 * Message history state (`messages`).
 * Typing simulation (`isTyping`).
 * Logic for parsing user input and selecting the correct response strategy.
 
-`src/components/views/ChatView.tsx`
-
+### `src/components/views/ChatView.tsx`
 The visual interface. It handles:
 * Auto-scrolling logic.
 * Mobile keyboard layout adjustments (`dvh`).
 * Session termination safety guards (`AlertDialog`).
 
-Configuration
+<br />
 
-**Tailwind Config**
+## Configuration
 
+### Tailwind Config
 The visual theme is defined in `tailwind.config.ts`. You can adjust the "Pradita Orange" or "Glass Effect" opacity variables there.
 
-**Meta Data**
-
+### Meta Data
 To change the website title or SEO description shown in link previews, edit `index.html`.
 
-Extending the Chatbot
+<br />
+
+## Extending the Chatbot
 
 **Add a New Major**
 1.  Open `src/data/knowledge.ts`.
@@ -143,7 +155,9 @@ Since this is a static site:
 1.  Commit changes to GitHub.
 2.  Vercel (if connected) will automatically redeploy the new version.
 
-Troubleshooting
+<br />
+
+## Troubleshooting
 
 | Issue | Solution |
 | :--- | :--- |
@@ -152,7 +166,9 @@ Troubleshooting
 | **Bot Not Replying** | Check `useChat.ts` keyword matching logic. Ensure text matches case-insensitive rules. |
 | **Images/Icons Missing** | Verify `lucide-react` is installed and imported correctly. |
 
-Deployment
+<br />
+
+## Deployment
 
 This project is optimized for deployment on **Vercel**.
 
@@ -161,12 +177,16 @@ This project is optimized for deployment on **Vercel**.
 3.  Use default Vite settings (Build command: `npm run build`, Output: `dist`).
 4.  Add your custom domain (optional).
 
-Resources & Credits
+<br />
+
+## Resources & Credits
 
 * **Content Source:** Buku Panduan Akademik Sistem Informasi 2020 - Universitas Pradita.
 * **Course References:** DQLab, Dicoding, Skilvul, BuildWithAngga.
 * **Author:** Greycia.
 
-License
+<br />
+
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
