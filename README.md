@@ -67,33 +67,6 @@ AspiraSI/
 
 <br />
 
-## Quick Start (Local)
-
-Ensure you have Node.js installed.
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/Greycia/AspiraSI-Chatbot-Akademik.git
-    cd AspiraSI-Chatbot-Akademik
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open in browser:**
-    Navigate to `http://localhost:8080` (or the port shown in terminal).
-
-<br />
-
 ## How It Works
 
 1.  **User Onboarding:** Users input their name, semester, and initial interest (Major) in the `LandingView`.
